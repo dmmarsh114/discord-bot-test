@@ -28,7 +28,7 @@ client.on('message', message => {
     // if the message does not start w/ prefix, or if the message was sent by a bot, then exit
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     if (message.content === `${prefix}good bot`) {
-        message.channel.send(':relaxed:');
+        return message.channel.send(':relaxed:');
     }
 
     // create an args variable that slices off the prefix entirely, removes the leftover whitespaces and then splits it into an array by spaces.
